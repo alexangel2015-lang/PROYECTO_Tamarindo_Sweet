@@ -299,25 +299,27 @@ header {
 .campo textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc; 
-  border-radius: 0;
+  border: 2px solid #072219; 
+  border-radius: 20px;
   font-size: 1rem;
   box-sizing: border-box; 
 }
 
 .boton-enviar {
-  background-color: #000;
+  background-color: #072219;
   color: #fff;
   border: none;
+  font-family: "ambit";
   padding: 12px 30px;
   font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 50px;
   transition: background-color 0.3s;
 }
 
 .boton-enviar:hover {
-  background-color: #333;
+  background-color: #1e4b3c;
 }
 
 /* --- Responsivo para Móviles --- */

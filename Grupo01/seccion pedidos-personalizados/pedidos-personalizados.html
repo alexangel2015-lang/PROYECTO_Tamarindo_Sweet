@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedidos Personalizados - Tamarindo Sweet</title>
-  <link rel="icon" href="../favicon/favicon.png" type="logo">
+  <title>Tamarindo Sweet</title>
+  <link rel="icon" href="/favicon/Logo responsive.png" type="logo">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -125,16 +125,16 @@
     <form class="form-pedidos">
         
         <div class="seccion-box full-width">
-            <h3>Tipo de ocasión</h3>
-            <div class="grid-checkboxes">
-                <label class="check-box"><input type="checkbox"> 🎂 Cumpleaños</label>
-                <label class="check-box"><input type="checkbox"> 💍 Boda</label>
-                <label class="check-box"><input type="checkbox"> 👶 Baby Shower</label>
-                <label class="check-box"><input type="checkbox"> 🎓 Graduación</label>
-                <label class="check-box"><input type="checkbox"> ❤️ Aniversario</label>
-                <label class="check-box"><input type="checkbox"> ✏️ Otros</label>
-            </div>
-        </div>
+    <h3>Tipo de ocasión</h3>
+    <div class="grid-checkboxes">
+        <label class="check-box"><input type="radio" name="ocasion"> 🎂 Cumpleaños</label>
+        <label class="check-box"><input type="radio" name="ocasion"> 💍 Boda</label>
+        <label class="check-box"><input type="radio" name="ocasion"> 👶 Baby Shower</label>
+        <label class="check-box"><input type="radio" name="ocasion"> 🎓 Graduación</label>
+        <label class="check-box"><input type="radio" name="ocasion"> ❤️ Aniversario</label>
+        <label class="check-box"><input type="radio" name="ocasion"> ✏️ Otros</label>
+    </div>
+</div>
 
         <div class="seccion-box full-width">
             <h3>Tamaños y porciones</h3>
@@ -169,17 +169,17 @@
         <div class="col-izquierda">
             
             <div class="seccion-box">
-                <h3>Sabor del bizcocho</h3>
-                <div class="grid-checkboxes-small">
-                    <label><input type="checkbox"> Vainilla</label>
-                    <label><input type="checkbox"> Chocolate</label>
-                    <label><input type="checkbox"> Red Velvet</label>
-                    <label><input type="checkbox"> Zanahoria</label>
-                    <label><input type="checkbox"> Marmoleado</label>
-                    <label><input type="checkbox"> Otro</label>
-                </div>
-                <input type="text" placeholder="Especifique otro sabor" class="input-line">
-            </div>
+    <h3>Sabor del bizcocho</h3>
+    <div class="grid-checkboxes-small">
+        <label><input type="radio" name="sabor"> Vainilla</label>
+        <label><input type="radio" name="sabor"> Chocolate</label>
+        <label><input type="radio" name="sabor"> Red Velvet</label>
+        <label><input type="radio" name="sabor"> Zanahoria</label>
+        <label><input type="radio" name="sabor"> Marmoleado</label>
+        <label><input type="radio" name="sabor"> Otro</label>
+    </div>
+    <input type="text" placeholder="Especifique otro sabor" class="input-line">
+</div>
 
             <div class="seccion-box">
                 <h3>Diseño y decoración</h3>
@@ -189,40 +189,47 @@
             </div>
 
             <div class="seccion-box">
-                <h3>Mensaje en la torta</h3>
-                <input type="text" placeholder="Escribe el texto que quieres incluir" class="input-box">
-                
-                <div class="fecha-entrega">
-                    <i class="fa-regular fa-calendar"></i>
-                    <input type="date" placeholder="Fecha de entrega deseada">
-                </div>
+    <h3>Mensaje en la torta</h3>
+    <input type="text" placeholder="Escribe el texto que quieres incluir" class="input-box">
+    
+    <div class="fecha-entrega">
+        <i class="fa-regular fa-calendar"></i>
+        <input type="date" id="fechaEntrega" placeholder="Fecha de entrega deseada">
+    </div>
 
-                <div class="delivery-options">
-                    <label><input type="radio" name="envio"> Recoger</label>
-                    <label><input type="radio" name="envio"> Delivery</label>
-                </div>
-            </div>
+    <div class="delivery-options">
+        <label><input type="radio" name="envio"> Recoger</label>
+        <label><input type="radio" name="envio"> Delivery</label>
+    </div>
+</div>
+
+<script>
+    // Obtiene la fecha de hoy
+    const hoy = new Date().toISOString().split('T')[0];
+    // Le dice al calendario: "El valor mínimo que acepta es hoy"
+    document.getElementById('fechaEntrega').setAttribute('min', hoy);
+</script>
 
         </div>
 
         <div class="col-derecha">
 
             <div class="seccion-box">
-                <h3>Relleno o crema favorita</h3>
-                <div class="grid-checkboxes-small">
-                    <label><input type="checkbox"> Manjar blanco</label>
-                    <label><input type="checkbox"> Fresas con crema</label>
-                    <label><input type="checkbox"> Chocolate</label>
-                    <label><input type="checkbox"> Mermelada</label>
-                    <label><input type="checkbox"> Buttercream</label>
-                    <label><input type="checkbox"> Otro</label>
-                </div>
-                <input type="text" placeholder="Otro relleno" class="input-line">
-                
-                <div class="upload-area">
-                    <button type="button" class="btn-upload">Subir imagen de referencia</button>
-                </div>
-            </div>
+    <h3>Relleno o crema favorita</h3>
+    <div class="grid-checkboxes-small">
+        <label><input type="radio" name="relleno"> Manjar blanco</label>
+        <label><input type="radio" name="relleno"> Fresas con crema</label>
+        <label><input type="radio" name="relleno"> Chocolate</label>
+        <label><input type="radio" name="relleno"> Mermelada</label>
+        <label><input type="radio" name="relleno"> Buttercream</label>
+        <label><input type="radio" name="relleno"> Otro</label>
+    </div>
+    <input type="text" placeholder="Otro relleno" class="input-line">
+    
+    <div class="upload-area">
+        <button type="button" class="btn-upload">Subir imagen de referencia</button>
+    </div>
+</div>
 
             <div class="seccion-box">
                 <h3>Datos de contacto</h3>

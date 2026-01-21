@@ -233,9 +233,9 @@ header {
 .widget {
     background: white;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 3px solid #072219;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .widget h3 {
@@ -263,7 +263,7 @@ header {
 .cat-list a:hover { color: #000; font-weight: bold; }
 
 .btn-black {
-    background:#f7abaf;
+    background:#072219;
     color: white;
     border: none;
     border-radius: 50px;
@@ -272,18 +272,36 @@ header {
     cursor: pointer;
     margin-top: 10px;
     font-weight: bold;
+    display: block;
+    text-align: center;
+    text-decoration: none;   
+    box-sizing: border-box; 
 }
 
 .inspiration-box {
     background: #eee;
-    height: 150px;
+    height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px; 
     color: #aaa;
+    border-radius: 20px;
+
 }
 
+/* Esto le pone el borde directamente a la FOTO */
+.inspiration-box img {
+    border-radius: 20px;      
+}
+
+/* Esto asegura que la imagen llene el cuadro */
+.inspiration-box img {
+  width: 100%;       /* Ocupa todo el ancho disponible */
+  height: 190px;     /* Ajusta esta altura según prefieras */
+  object-fit: cover; /* Recorta la imagen para que no se estire feo */
+  display: block;    /* Elimina espacios extraños debajo de la imagen */
+}
 /* --- ZONA DE PRODUCTOS --- */
 .products-grid-area {
     flex: 3;
@@ -302,6 +320,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
+    
 }
 
 /* TARJETA DE PRODUCTO */
@@ -311,6 +330,7 @@ header {
     padding: 15px;
     text-align: center;
     transition: transform 0.3s;
+    border-radius: 20px;
 }
 
 .product-card:hover {
@@ -323,6 +343,7 @@ header {
     height: 200px;
     object-fit: cover;
     margin-bottom: 15px;
+    border-radius: 20px;
 }
 
 .product-card h4 {
@@ -387,6 +408,11 @@ header {
     margin-bottom: 40px;       
     display: block;          
     animation: aparecerDesdeArriba 1s ease-out;
+}
+.range-slider {
+  width: 100%;         /* Para que ocupe todo el ancho */
+  accent-color: black; /* ¡Esto cambia el azul por negro! */
+  cursor: pointer;
 }
 .page-banner h1 {
     font-size: 55px;
